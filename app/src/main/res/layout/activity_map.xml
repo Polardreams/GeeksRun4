@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+   <fragment
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_above="@+id/textView1"
+    android:layout_alignParentTop="true"
+    class="com.google.android.gms.maps.MapFragment" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:text="Runden" 
+        android:textColor="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/touch_light_effekt"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:text="HUD/History"
+        android:textColor="@android:color/white" />
+    <ListView
+        android:id="@+id/listView_replay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+</ListView>
+
+    <SlidingDrawer
+	    android:id="@+id/slidingDrawer1"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentBottom="true"
+	    android:content="@+id/map_content"
+	    android:handle="@+id/map_handle" 
+	    android:orientation="horizontal"
+	    android:alpha="80">
+
+	    <Button
+	        android:id="@+id/map_handle"
+	        android:layout_width="29dp"
+	        android:layout_height="126dp"
+	        android:background="@drawable/btn_slide" />
+
+	    <LinearLayout
+	        android:id="@+id/map_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical" 
+	        android:background="#000000"
+	        >
+
+	        <TextView
+	            android:id="@+id/mapslide_textView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Dashboard"
+	            android:textColor="#FFFFFF"
+	            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	        <ProgressBar
+	            android:id="@+id/mapslide_progressBar1"
+	            style="?android:attr/progressBarStyleHorizontal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:progress="100" 
+	            android:progressTint="@color/geek_green"/>
+
+	        <TextView
+	            android:id="@+id/mapslide_textView2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Replay"
+	            android:textColor="#FFFFFF"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	        <ToggleButton
+	            android:id="@+id/mapslide_tooglebutton1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:layout_marginLeft="10dp"
+	            android:textOff="Start"
+	            android:textOn="Stop" />
+
+	        <Button
+	            android:id="@+id/mapslide_button1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:text="Läufer auswählen"
+	            android:textAppearance="?android:attr/textAppearanceMedium" 
+	            android:layout_marginLeft="30dp"/>
+
+	        <SeekBar
+	            android:id="@+id/mapslide_seekbar"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:background="#000000"
+	            android:max="500"
+	            android:progress="200"
+	            android:progressTint="@color/geek_green"
+	            android:textColor="#FFFFFF"
+	            android:thumbTint="@color/geek_green" />
+
+	        <TextView
+	            android:id="@+id/mapslide_textView5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:text="Zeiteinstellung: "
+	            android:layout_marginLeft="10dp"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+	        <SeekBar
+	            android:id="@+id/mapslideanimation_seekbar"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:background="#000000"
+	            android:progress="7"
+	            android:max="20"
+	            
+	            android:progressTint="@color/geek_green"
+	            android:textColor="#FFFFFF"
+	            android:thumbTint="@color/geek_green" />
+	       
+	        <TextView
+	            android:id="@+id/mapslide_textView6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:text="zusätzliche künstliche Geopunkte: "
+	            android:layout_marginLeft="10dp"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	        
+	        <TextView
+	            android:id="@+id/mapslide_textView3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:text="GeoPlayer Edit"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	        <Switch
+	            android:id="@+id/mapslide_switch1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:layout_marginLeft="10dp"
+	            android:text="GeoPlayer Status: "
+	            android:textOff="aus"
+	            android:textOn="an" />
+			<Button
+	            android:id="@+id/mapslide_button2"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:text="GeoPlayerMap speichern"
+	            android:textAppearance="?android:attr/textAppearanceMedium" 
+	            android:layout_marginLeft="10dp"/>
+
+	        <TextView
+	            android:id="@+id/mapslide_textView4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:text="Map Editor"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	        <Switch
+	            android:id="@+id/mapslide_switch2"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:layout_marginLeft="10dp"
+	            android:text="Mapeditor Status: "
+	            android:textOff="aus"
+	            android:textOn="an" />
+
+	        <Button
+	            android:id="@+id/mapslide_button3"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:background="#000000"
+	            android:layout_marginLeft="10dp"
+	            android:text="Karte speichern" />
+	    </LinearLayout>
+	</SlidingDrawer>
+</RelativeLayout>

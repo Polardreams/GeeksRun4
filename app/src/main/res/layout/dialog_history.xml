@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/geek_black" >
+
+    <TextView
+        android:id="@+id/his_dia_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Ansicht und Bearbeitung"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/geek_white" />
+
+    <Button
+        android:id="@+id/his_dia_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/his_dia_textView2"
+        android:background="@drawable/btn_dark"
+        android:text="laden"
+        android:textColor="@color/geek_white" />
+
+    <Button
+        android:id="@+id/his_dia_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/his_dia_button3"
+        android:background="@drawable/btn_dark"
+        android:text="umbenennen"
+        android:textColor="@color/geek_white" />
+
+    <Button
+        android:id="@+id/his_dia_button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/his_dia_button1"
+        android:background="@drawable/btn_dark"
+        android:text="löschen"
+        android:textColor="@color/geek_white" />
+
+    <TextView
+        android:id="@+id/his_dia_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/his_dia_button4"
+        android:layout_centerHorizontal="true"
+        android:text="Export"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/geek_white" />
+
+    <Button
+        android:id="@+id/his_dia_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/his_dia_textView1"
+        android:background="@drawable/btn_dark"
+        android:text="exportieren"
+        android:textColor="@color/geek_white" />
+
+    <ProgressBar
+        android:id="@+id/his_dia_progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/his_dia_button2"
+        android:progress="100"
+        android:progressTint="@color/geek_green" />
+
+    <Button
+        android:id="@+id/his_dia_button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/his_dia_progressBar1"
+        android:background="@drawable/btn_dark"
+        android:text="Abbrechen"
+        android:textColor="@color/geek_white" />
+
+</RelativeLayout>

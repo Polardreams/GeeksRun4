@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="geek_white">#FFFFFF</color>
+    <color name="geek_green">#00FF00</color>
+    <color name="geek_grey">#585858</color>
+    <color name="geek_black">#000000</color>
+    
+</resources>

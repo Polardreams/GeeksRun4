@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/hud_slide_item" android:title="SlideBar" android:showAsAction="always" android:icon="@drawable/slide_men" ></item>
+    
+
+</menu>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Erweiterte Einstellungen">
+    <PreferenceScreen android:title="Personalien" android:key="pers" android:summary="Alles rund um deine Kondition und Person">
+        <EditTextPreference android:summary="Gebe deinen Namen ein." android:title="Name" android:key="pers_name" android:defaultValue="Runner"/>
+        <EditTextPreference android:summary="Gebe dein Alter ein." android:title="Alter" android:key="pers_age" android:defaultValue="25"/>
+        <EditTextPreference android:title="Größe" android:key="pers_height" android:summary="Gebe deine Körpergröße an." android:defaultValue="186"/>
+        <EditTextPreference android:key="pers_weight" android:summary="Gebe dein Körpergewicht an." android:title="Gewicht" android:defaultValue="95"/>
+        <ListPreference android:title="Geschlecht" android:key="pers_sexx" android:summary="Gebe dein biologisches Geschlecht an." android:entries="@array/pers_sex" android:entryValues="@array/pers_sex_id"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:key="hud" android:title="Displayeinstellungen" android:summary="Für deinen optimalen Lauf">
+        <CheckBoxPreference android:title="Ansagen" android:summary="Möchtes du Trainingsansagen während des Laufes hören?" android:key="hud_speak" android:defaultValue="true"/>
+        <EditTextPreference android:summary="Achtung, das sollte nur ein erfahrener GeeksRunner optimieren!" android:title="GPS-Setzung" android:key="hud_gps_points" android:defaultValue="5000"/>
+        <EditTextPreference android:summary="Wie stark vergrößert soll die Karte während des Laufes sein?" android:title="GoogleMap Zoom" android:key="hud_map_zoom" android:defaultValue="15"/>
+        <EditTextPreference android:summary="Gebe deine Vorbereitungszeit an." android:title="Countdown" android:key="hud_time_countdown" android:defaultValue="15"/>
+        <CheckBoxPreference android:summary="Höhenmeter werden mit in die Verbrennungsrechnung aufgenommen." android:title="Höhenmeter" android:key="hud_height_energie" android:defaultValue="true"/>
+        <EditTextPreference android:key="hud_speak_intervall" android:defaultValue="300" android:title="Sprechintervall" android:summary="Aller wieviel Sekunden möchtest du einen Bericht?"/>
+        <ListPreference android:title="GPS Ortungsoption" android:key="hud_gps_option" android:summary="Möchtest Du mit oder ohne Wifi Ortung laufen?" android:entries="@array/yes_no" android:entryValues="@array/yes_no"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:key="help" android:summary="Erfahre mehr über deine App" android:title="Hilfe">
+        <PreferenceScreen android:title="Seitennavigation" android:key="help_nav">
+            <Preference android:summary="@string/help_nav_txt" android:title="Seitennavigation" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="help_music" android:title="Musikplayer">
+            <Preference android:title="Musikplayer" android:summary="@string/help_musicplayer_txt" />
+            <Preference android:title="Musikordner" android:summary="@string/help_music_ordner_txt" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Export" android:key="help_export">
+            <Preference android:title="Exportieren" android:summary="@string/help_export_txt" />
+            <Preference android:summary="@string/help_export_ordner_txt" android:title="Exportordner" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Lap" android:key="help_lap">
+            <Preference android:title="Die Tabelle" android:summary="@string/help_lap_txt" />
+            <Preference android:key="load_progress" android:defaultValue="0" />
+            <Preference android:key="back_press_flag" android:defaultValue="false" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="help_import" android:title="Import">
+            <Preference android:title="Importieren" android:summary="@string/help_import_txt" />
+            <Preference android:title="Importordner" android:summary="@string/help_import_ordner" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="help_history" android:title="Trainingsverläufe">
+            <Preference android:title="Sortierverfahren" android:summary="@string/help_history_sort_txt" />
+            <Preference android:title="Trainingsverläufe umbenennen" android:summary="@string/help_history_rename_txt" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="help_map" android:title="Karte">
+            <Preference android:title="Marker der Karte" android:summary="@string/help_map_marker" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="help_replay" android:title="Replay">
+            <Preference android:title="Replay" android:summary="@string/help_replay_txt" />
+            <Preference android:title="Zeiteinstellung" android:summary="@string/help_replay_timeoption_txt" />
+            <Preference android:title="zusätzliche künstliche Geopunkte" android:summary="@string/help_replay_animation_txt" />
+        </PreferenceScreen>
+        <PreferenceScreen android:key="help_mapeditor" android:title="MapEditor">
+            <Preference android:title="MapEditor" android:summary="@string/help_map_editor_txt" />
+            <Preference android:title="Mappunkt versetzen" android:summary="@string/help_map_editor_setpoint_txt" />
+            <Preference android:title="neue Map speichern" android:summary="@string/help_map_editor_save_txt" />
+            <Preference android:title="Map Editor schließen" android:summary="@string/help_map_editor_close_txt" />
+        </PreferenceScreen>        
+        <PreferenceScreen android:key="help_geoplayer_edit" android:title="GeoPlayer Edit">
+            <Preference android:title="GeoPlayer Edit" android:summary="@string/help_geoplayer_txt"/>
+            <Preference android:title="GeoPunkte festlegen" android:summary="@string/help_set_geopointa_txt" />
+            <Preference android:title="" android:summary="@string/help_set_geopointb_txt" />
+            <Preference android:title="Musiktitel im Musikordner" android:summary="@string/help_geoplayer_music_txt" />
+            <Preference android:title="GeoPlayer Marker" android:summary="@string/help_geoplayer_marker_txt" />
+            <Preference android:title="Musiktitelwechsel" android:summary="@string/help_geoplayer_change_music_txt" />
+            <Preference android:title="Achtung" android:summary="@string/help_geoplayer_attantion_txt" />
+            <Preference android:title="GeoPlayer Liste abspeichern" android:summary="@string/help_geoplayer_save_txt" />
+            <Preference android:title="GeoPlayer Liste" android:summary="@string/help_geoplayer_list_txt" />
+        </PreferenceScreen>         
+        <PreferenceScreen android:key="help_display" android:title="Display">
+            <Preference android:title="Challenge" android:summary="@string/help_display_challenge_txt"/>
+            <Preference android:title="Läufer auswählen" android:summary="@string/help_display_runner_chance_txt" />
+            <Preference android:title="Achtung" android:summary="@string/help_display_attantion_txt" />
+            <Preference android:title="Hinweis" android:summary="@string/help_display_tip_txt" />
+            <Preference android:title="GeoPlayer" android:summary="@string/help_display_geoplayer_txt" />
+            <Preference android:title="Achtung" android:summary="@string/help_geoplayer_attantion_txt" />
+            <Preference android:title="laden von GeoPlayer Listen" android:summary="@string/help_display_load_geoplayerlist_txt" />
+            <Preference android:title="GeoPlayerlisten importieren" android:summary="@string/help_display_geoplayer_import_txt" />
+            <Preference android:title="GeoPlayerlisten exportieren" android:summary="@string/help_display_geoplayer_export_txt" />
+        </PreferenceScreen> 
+        <PreferenceScreen android:key="help_performance" android:title="Leistungsprofil">
+            <Preference android:title="Ranking" android:summary="@string/help_performance_rankinga_txt"/>
+            <Preference android:title="" android:summary="@string/help_performance_rankingb_txt"/>
+            <Preference android:title="Trophäen" android:summary="@string/help_performance_tropaehen_txt" />
+            <Preference android:title="Medaillen" android:summary="@string/help_performance_medaillen_txt" />
+            <Preference android:title="unterschiedliche Karrieren" android:summary="@string/help_performance_carrier_txt" />
+            <Preference android:title="Spielstand speichern" android:summary="@string/help_performance_save_txt" />
+            <Preference android:title="Neuanfang" android:summary="@string/help_performance_new_txt" />
+        </PreferenceScreen>         
+        
+        
+        
+        
+    </PreferenceScreen><PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Leistungsprofil" android:summary="Hier sind einzelne Daten deiner bisherigen Leistungen einsehbar." android:key="performance_profile" android:shouldDisableView="true" android:enabled="false" android:selectable="false">
+        <EditTextPreference android:summary="Hier findet du alle deine gelaufenen Kilometer." android:key="performance_km" android:title="bisher gelaufene Kilometer" android:defaultValue="0"/>
+        <EditTextPreference android:summary="Hier findet du alle bisher verbrannten Kalorien (Höhenmeter einbezogen)" android:key="performance_kalorien" android:title="bisher verbrannte Kalorien" android:defaultValue="0"/>
+        <EditTextPreference android:summary="Hier findet du deine bisher gelaufene Zeit." android:key="performance_time" android:title="gelaufene Zeit" android:defaultValue="0"/>
+        <EditTextPreference android:summary="Hier findest du die Anzahl an Trainings die du absolviert hast." android:title="Anzahl von Trainings" android:defaultValue="0" android:key="performance_training"/>
+        <EditTextPreference android:summary="Hier findest du die Anzahl der bisherigen Challenges." android:key="performance_challenge" android:title="Anzahl der Challenges" android:defaultValue="0"/>
+        <PreferenceScreen android:title="Medaillen" android:summary="Hier ist eine Übersicht deiner gewonnen Medaillen." android:key="challenge_med">
+            <EditTextPreference android:key="performance_challenge_bronxe" android:title="Anzahl der Bronxemedaillen" android:defaultValue="0"/>
+            <EditTextPreference android:key="performance_challenge_silber" android:title="Anzahl der Silbermedaillen" android:defaultValue="0"/>
+            <EditTextPreference android:key="performance_challenge_gold" android:title="Anzahl der Goldmedaillen" android:defaultValue="0"/>
+        </PreferenceScreen>
+    </PreferenceScreen><PreferenceScreen android:title="Sonstiges" android:key="other" android:summary="Sound, Musik, Export, Import, Miskordner" android:shouldDisableView="true" android:enabled="false" android:selectable="false"><PreferenceScreen android:summary="Hier kannst du verschiedene Lautstärken einstellen." android:key="sound" android:title="Soundeinstellungen">
+        <EditTextPreference android:summary="Hier kannst Du die Lautstärke deines Musikplayers eingeben." android:key="sound_musicplayer" android:title="Musikplayer" android:defaultValue="80" />
+        <EditTextPreference android:summary="Hier kannst Du die Lautstärke der Kommentatoren eingeben." android:key="sound_challenge" android:title="Challenge Lautstärke" android:defaultValue="80" />
+        <EditTextPreference android:summary="Hier kannst Du die Lautstärke des Geoplayers eingeben." android:key="sound_geoplayer" android:title="Geoplayer Lautstärke" android:defaultValue="80" />
+        
+    </PreferenceScreen><PreferenceScreen android:key="export" android:title="Exportieren" android:summary="Export deiner Trainings">
+        <EditTextPreference android:key="export_localtion" android:summary="Wohin soll dein Training exportiert werden?" android:title="Speicherort" android:defaultValue="/storage/emulated/0/My Documents" />
+    </PreferenceScreen><PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="import" android:title="Importieren" android:summary="Import deiner Trainings">
+        <EditTextPreference android:key="import_location" android:title="Speicherort" android:summary="Von wo aus kann dein Training importiert werden?" android:defaultValue="/storage/emulated/0/My Document" />
+        
+    </PreferenceScreen><PreferenceScreen android:title="Musik" android:key="music" android:summary="Trage hier deinen Musikordner ein.">
+        <EditTextPreference android:title="Musikordner" android:key="music_location" android:summary="In welchem Ordner befindet sich deine Musik?" android:defaultValue="/storage/emulated/0/Music" />
+        
+    </PreferenceScreen></PreferenceScreen>
+    
+    
+    
+    
+    
+
+</PreferenceScreen>

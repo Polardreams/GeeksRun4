@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sound_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/geek_black"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sound_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/geek_white" />
+
+    <SeekBar
+        android:id="@+id/sound_seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:progressTint="@color/geek_green"
+	            android:thumbTint="@color/geek_green"/>
+
+    <TextView
+        android:id="@+id/sound_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/geek_white" />
+
+    <SeekBar
+        android:id="@+id/sound_seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:progressTint="@color/geek_green"
+	            android:thumbTint="@color/geek_green"/>
+
+    <TextView
+        android:id="@+id/sound_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/geek_white" />
+
+    <SeekBar
+        android:id="@+id/sound_seekBar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:progressTint="@color/geek_green"
+	            android:thumbTint="@color/geek_green"/>
+
+    <Button
+        android:id="@+id/sound_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_dark"
+        android:text="Button"
+        android:textColor="@color/geek_white" />
+
+</LinearLayout>
