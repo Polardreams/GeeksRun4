@@ -8,6 +8,8 @@ Create by David Hernandez
 4) clean and rebuild
 5) enter your Google Maps API Key (AndroidManifest.xml)
 
+
+*Multidex
 a) write in app gradle:
 defaultConfig {
         //...
