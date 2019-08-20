@@ -32,7 +32,8 @@ Funktions of GeeksRun
 - Google Maps
 - musicplayer
 - geo Trigger for music player
-- speech and comments during running with a included komplex commit-system (like the game : Fifa 98 for playstation)
-- Challenge, run again yourself with a bot of your old runns
-- overview of your rewards and performances
+- speech and comments during running with a included complex comment-system (like the game : Fifa 98 for playstation 1)
+- challenge yourself with bots of your old run-datas (every file (run history) can be a bot)
+- overview of your goblets and performances
+- run history (simple entries)
         
