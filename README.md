@@ -12,6 +12,7 @@ I start the project at 2015 (developing) and finished it, one year later (2016).
 
 *Multidex
 modify your project gradl
+
 a) write in defaultConfig {} ... multiDexEnabled true
     
 b) write dependencies {} ... implementation 'com.android.support:multidex:1.0.3'
