@@ -11,18 +11,12 @@ I start the project at 2015 (developing) and finished it, one year later (2016).
 
 
 *Multidex
-a) write in app gradle:
-defaultConfig {
-        //...
-        multiDexEnabled true
-    }
+modify your project gradl
+a) write in defaultConfig {} ... multiDexEnabled true
     
-dependencies {
-  //...
-    implementation 'com.android.support:multidex:1.0.3'
-}
+b) write dependencies {} ... implementation 'com.android.support:multidex:1.0.3'
 
-b) go to AndroidManifest and include the following in the application 
+c) go to AndroidManifest and include the following in the application-tag
     <application
 //...
         android:name="android.support.multidex.MultiDexApplication" >
