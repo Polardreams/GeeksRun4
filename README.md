@@ -16,10 +16,8 @@ a) write in defaultConfig {} ... multiDexEnabled true
     
 b) write dependencies {} ... implementation 'com.android.support:multidex:1.0.3'
 
-c) go to AndroidManifest and include the following in the application-tag
-    <application
-//...
-        android:name="android.support.multidex.MultiDexApplication" >
+c) go to AndroidManifest and include the following in the application-tag ...
+    android:name="android.support.multidex.MultiDexApplication"
         
 Funktions of GeeksRun
 - analyse and safe your running datas (Map, Time Laps, Graphs, speed, distance ...)
